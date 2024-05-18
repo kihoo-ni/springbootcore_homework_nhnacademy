@@ -1,0 +1,32 @@
+<configuration>
+    <!-- TODO-2 파일 출력을 위한 Appender 정의 -->
+    <appender name="ACCOUNT" class="ch.qos.logback.core.FileAppender">
+        <file>account.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="PRICE" class="ch.qos.logback.core.FileAppender">
+        <file>price.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+
+
+    <logger name="com.nhnacademy.demo.aop.LoginAop" level="info" additivity="false">
+        <appender-ref ref="ACCOUNT"/>
+    </logger>
+
+
+    <logger name="com.nhnacademy.demo.aop.PriceAop" level="info" additivity="false">
+        <appender-ref ref="PRICE"/>
+    </logger>
+
+</configuration>
