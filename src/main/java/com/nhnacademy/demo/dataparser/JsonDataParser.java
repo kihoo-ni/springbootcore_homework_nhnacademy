@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nhnacademy.demo.Account;
 import com.nhnacademy.demo.Price;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @Slf4j
 @Component
+@AllArgsConstructor
 @ConditionalOnProperty(prefix = "data", name = "parser", havingValue = "json")
 public class JsonDataParser implements DataParser {
 
