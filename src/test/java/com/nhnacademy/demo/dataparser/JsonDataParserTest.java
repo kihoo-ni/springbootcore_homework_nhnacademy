@@ -66,3 +66,4 @@ public class JsonDataParserTest {
         assertEquals(expectedAccounts.get(1).getName(), accounts.get(1).getName());
     }
 }
+
